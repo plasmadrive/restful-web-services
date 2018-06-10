@@ -1,4 +1,4 @@
-package com.plasmadrive.restfulwebservices
+package com.plasmadrive.restfulwebservices.helloworld
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -22,7 +22,7 @@ class HelloWorldController {
     }
 
     @GetMapping(path = ["hello-world-bean/path-variable/{message}"])
-    fun helloWorldBean(@PathVariable message: String) : HelloWorldBean  {
+    fun helloWorldBean(@PathVariable message: String) : HelloWorldBean {
         return HelloWorldBean(message)
     }
 }
